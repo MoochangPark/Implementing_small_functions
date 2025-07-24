@@ -3,4 +3,4 @@
 
 |기능|링크|진행현황|
 |--|--|--|
-|1. fujifilm의 Multiple_Exposure openCV로 가능할까?|추후 추가예정|진행중|
+|1. fujifilm의 Multiple_Exposure를 openCV로 구현할 수 있을까?|[1.Multiple_Exposure](./1.Multiple_Exposure/ReadMe.md)|진행완료|
