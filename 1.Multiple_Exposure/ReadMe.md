@@ -6,15 +6,16 @@
 
 그래서 이런 기능은 뭐라고 하는지 찾아보니 Multiple_Exposure이라는 옛 카메라의 기법이란다. 이걸 잘하면 이런 사진들도 가능하다고 한다.
 
-[Multiple Exposure 이해하기](https://www.fujifilm-x.com/en-gb/learning-centre/understanding-multiple-exposure-photography/)
-[Multiple Exposure 기법의 사진찍기](https://www.leonardomascaro.com/blog/2019/7/22/in-camera-multiple-exposure-with-the-fujifilm-x-t2)
-[Multiple Exposure에서 Additive와 Average에 대하여](https://fujixweekly.com/tag/multiple-exposure/)
+- [Multiple Exposure 이해하기](https://www.fujifilm-x.com/en-gb/learning-centre/understanding-multiple-exposure-photography/)
+- [Multiple Exposure 기법의 사진찍기](https://www.leonardomascaro.com/blog/2019/7/22/in-camera-multiple-exposure-with-the-fujifilm-x-t2)
+- [Multiple Exposure에서 Additive와 Average에 대하여](https://fujixweekly.com/tag/multiple-exposure/)
+
 그래서 만들어보려고 한다.
 
 ---
 
-### Level One - 이해하기
- 우선 fujifilm은 어떻게 구현하려고 하는지 GPT 시켜서 정리시켜 봤다.
+### ✅ Level One - 이해하기
+ 📍 우선 fujifilm은 어떻게 구현하려고 하는지 GPT 시켜서 정리시켜 봤다.
 
 ```
 Fujifilm X-T2 다중노출(Multiple Exposure) 기능 개요
@@ -65,16 +66,16 @@ result_dark   = cv2.min(img1, img2)    # Dark 모드
 
 ---
 
-### Level Two - 개발하기
+### ✅ Level Two - 개발하기
 
-우선 만들어야 한 기능은 다음과 같다.
+📍 우선 만들어야 한 기능은 다음과 같다.
 
 1. 첫 번째 사진을 촬영하기
 2. 첫 번째 사진의 각도 조정하기
 3. 두 번째 사진을 촬영하기
 4. 모드에 따라 합성하기
 
-그 다음 고려해야 할 점은 무엇일까.
+📍 그 다음 고려해야 할 점은 무엇일까.
 
 1. 첫 번째 사진을 촬영하기
    - 스페이스바를 눌러서 사진 찍기
@@ -90,7 +91,7 @@ result_dark   = cv2.min(img1, img2)    # Dark 모드
 
 ---
 
-### Level Three - 코드 작성하기
+### ✅ Level Three - 코드 작성하기
 
 1. 코드에 사용되는 라이브러리는 다음과 같다.
 
@@ -133,7 +134,7 @@ result_dark   = cv2.min(img1, img2)    # Dark 모드
    - [fix divide by zero](https://stackoverflow.com/questions/55653708/how-to-fix-runtimewarning-divide-by-zero-encountered-in-double-scalars/55653918)
 
 ---
-### Level Four - 개발 후기
+### ✅ Level Four - 개발 후기
 > 아무래도 Fujifilm의 기술이니까 자료가 많이 있을까 싶었는데, 의외로 정리된 자료들이 많아서 구현할 수 있었던 것 같다.
 > 이번 기회에 openCV와 numpy의 기능을 많이 사용해본 것 같다. 아마 이후에 영상에 관련된 프로젝트에서도 많이 사용할 것 같으니 이번 기회에 잘 기억해 두어야할 것 같다.
 > bright와 dark의 경우 처음에는 gpt의 설명을 믿고 '더 큰값과 더 작은 값만 구하면 되겠지~' 했다가 봉변을 당했다. (`역시 GPT는 참고만 해야한다...ㅠㅠ`)
@@ -141,7 +142,7 @@ result_dark   = cv2.min(img1, img2)    # Dark 모드
 > 이번 기회를 기반으로 openCV로 영상처리를 할 때 좀 더 쉽게 다가갈 수 있을 것 같다.
 
 ---
-### Level Five - 다음 단계는?
+### ✅ Level Five - 다음 단계는?
 1. 해당 기능을 합리적이고 최저 성능의 IC 칩에 넣어서 동작시켜보기
 2. 나만의 Toy Camera로 만들고 기능을 넣어보기
 3. Fujifilm의 다른 재미있는 기능 구현해보기
